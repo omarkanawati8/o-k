@@ -759,17 +759,23 @@ China Academy of Art in Hangzhou. Currently pursuing PhD studies in the departme
     <!-- ADD THE GALLERY OVERLAY HERE -->
     <!-- Fullscreen Gallery Overlay -->
 <div id="galleryOverlay" class="gallery-overlay">
-  <span class="close-btn">&times;</span>
-  <div class="gallery-container">
-    <img id="expandedImage" class="gallery-image">
-    <div class="gallery-nav">
-      <button class="nav-btn prev-btn">&#10094;</button>
-      <button class="nav-btn next-btn">&#10095;</button>
-    </div>
+  <div class="gallery-header">
+    <span class="close-btn">&times;</span>
     <div class="image-counter"></div>
   </div>
+  <div class="gallery-content">
+    <img id="expandedImage" class="gallery-image">
+    <div class="gallery-caption"></div>
+  </div>
+  <div class="gallery-nav">
+    <button class="nav-btn prev-btn">
+      <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+    </button>
+    <button class="nav-btn next-btn">
+      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+    </button>
+  </div>
 </div>
-
     <script>
         // Your existing script content...
     </script>
