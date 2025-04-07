@@ -105,36 +105,64 @@ header \{\
     margin-right: auto;\
 \}\
 \
-/* ===== ABOUT SECTION ===== */\
-.about-grid \{\
-    display: grid;\
-    grid-template-columns: 1fr 1fr;\
-    gap: 60px;\
-    align-items: start;\
-\}\
-\
-.about-portrait \{\
-    position: relative;\
-    margin-top: 20px;\
-\}\
-\
-.portrait-image \{\
-    width: 100%;\
-    height: auto;\
-    max-height: 80vh;\
-    object-fit: contain;\
-    border-left: 1px solid var(--border-light);\
-    padding-left: 40px;\
-\}\
-\
-.portrait-caption \{\
-    font-size: 14px;\
-    color: var(--text-muted);\
-    text-align: right;\
-    margin-top: 15px;\
-    font-style: italic;\
-\}\
-\
+/* About Section Grid Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-portrait {
+    position: sticky;
+    top: 100px;
+    padding-left: 40px;
+    border-left: 1px solid var(--border-light);
+}
+
+.portrait-image {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.portrait-caption {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-portrait {
+        order: -1;
+        padding-left: 0;
+        border-left: none;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+        position: static;
+    }
+    
+    .portrait-image {
+        max-height: 60vh;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .portrait-caption {
+        text-align: center;
+    }
+}
 /* ===== WORKS SECTION ===== */\
 .works-grid \{\
     display: grid;\
