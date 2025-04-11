@@ -28,7 +28,7 @@
         }
         
         body {
-            font-family: 'Neue Haas Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Serif font similar to Gagosian */
             color: var(--primary-color);
             background: var(--secondary-color);
             line-height: 1.6;
@@ -125,20 +125,43 @@
         }
         
         .section-header {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         
         .section-title {
-            font-size: 20px;
+            font-size: 28px; /* Increased font size */
+	   font-weight: bold;
             margin-bottom: 20px;
         }
         
         /* About Section */
+         .about-container {
+            display: flex;
+            align-items: flex-start; /* Align the image to the top of the text */
+            gap: 30px; /* Space between the text and the image */
+        }
+
+        .about-content {
+            flex: 2; /* Take up more space for the text */
+            max-width: 55%; /* Adjust the width of the text content */
+        }
+
         .about-text {
             font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            max-width: 700px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .profile-picture {
+            flex: 1; /* Take up less space for the image */
+            max-width: 500px; /* Increase the width of the profile picture */
+        }
+
+        .profile-picture img {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure the image fits nicely */
+            border-radius: 8px; /* Optional: Add rounded corners */
         }
         
         /* Works Grid */
@@ -402,14 +425,14 @@
                 <p>In 2016, he graduated from the Academy of Fine Arts and Design in Bratislava with a master's degree in Paper Restoration and Conservation. His research paper focused on the conservation and restoration of Japanese Prints Ukiyo-e artworks. Subsequently, in 2020, Omar obtained a second Master of Arts degree in Chinese Painting and Calligraphy from the China Academy of Art in Hangzhou. Currently pursuing PhD studies in the department of Chinese calligraphy at China Academy of Art.</p>
             </div>
             <div class="about-text">
-                <p>During his studies and following the graduation, Omar has actively participated in major exhibitions, including the International Exhibition of Modern Calligraphy "Writing Non-Writing", the "Biennial Exhibition of Lanting Calligraphy Association" and the “Exhibition-in-suitcases” at the CAPC Musée d’art Contemporain in Bordeaux.</p>
+                <p>During his studies and following the graduation, Omar has actively participated in major exhibitions, including the International Exhibition of Modern Calligraphy "Writing Non-Writing"(2019), the "Biennial Exhibition of Lanting Calligraphy Association"(2012) and the “Exhibition-in-suitcases” at the CAPC Musée d’art Contemporain in Bordeaux(2025).</p>
             </div>
             <div class="about-text">
                 <p>His research at the master's level delved into the intricacies of Qin dynasty Seal Script and Han dynasty Clerical Script. After graduation, Omar concentrated on the use of mixed media in calligraphy, specifically focusing on experimenting with corrosive fluids and metal alloys as a substitute for ink and paper as the primary medium of calligraphy and building an extensive artistic practice combining the use of these materials and processes with the traditional approaches to Chinese calligraphy.</p>
             </div>
         </div>
         <div class="profile-picture">
-            <img src="images/000.jpg" alt="Omar Kanawati" />
+            <img src="images/000.jpg" alt="Omar Kanawati">
         </div>
     </div>
 </section>
