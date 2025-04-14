@@ -259,38 +259,85 @@
         }
 
         .exhibition-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
         }
+
+        .exhibition-column {
+    width: 48%; /* Each column takes up 48% of the container width */
+}
 
         .exhibition-item {
-            margin-bottom: 30px;
-        }
+    margin-bottom: 15px; /* Space between exhibitions */
+}
 
         .exhibition-year {
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
         .exhibition-title {
-            margin-bottom: 5px;
-            line-height: 1.4;
-            font-size: 16px;
-        }
+    font-style: italic;
+    margin-bottom: 3px;
+}
 
         .exhibition-location {
-            color: var(--text-muted);
-            font-size: 14px;
-            font-style: italic;
-        }
+    color: gray;
+    font-size: 0.9em;
+       }
         
         /* Publications */
-        .publication-item {
-            margin-bottom: 40px;
-        }
-        
+.publication-list {
+    margin-top: 20px; /* Add spacing above the publications section */
+}
+
+.publication-item {
+    margin-bottom: 40px; /* Space between each publication */
+    font-size: 1em; /* Ensure text size remains consistent */
+    line-height: 1.6; /* Improve readability */
+}
+
+.publication-title {
+    font-weight: bold; /* Highlight publication titles */
+    margin-bottom: 5px; /* Add spacing between title and other text */
+}
+
+.publication-meta {
+    color: gray; /* Set a subtle color for metadata */
+    font-size: 0.9em; /* Slightly smaller font for metadata */
+}
+
+/* Catalogues Section */
+#catalogues {
+    margin-top: 40px;
+}
+
+.catalogues-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns like the Articles section */
+    gap: 20px; /* Space between items */
+}
+
+.catalogue-item {
+    margin-bottom: 20px;
+}
+
+.catalogue-year {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.catalogue-title {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.catalogue-meta {
+    color: gray;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
         /* Footer */
         footer {
     padding: 40px 20px;
@@ -322,9 +369,46 @@
 
 .copyright {
     font-size: 14px;
-    color: var(--text-muted);
+     color: var(--text-muted);
 }
-        
+         /* Dual Columns Container */
+.dual-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px; /* Space between Articles and Catalogues */
+    align-items: flex-start; /* Align content to the top */
+}
+
+/* Articles Section */
+#articles, #catalogues {
+    margin: 0;
+}
+
+.articles-grid, .catalogues-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between items */
+}
+
+.article-item, .catalogue-item {
+    margin-bottom: 20px;
+}
+
+.article-year, .catalogue-year {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.article-title, .catalogue-title {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.article-meta, .catalogue-meta {
+    color: gray;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
         /* Responsive */
         @media (max-width: 768px) {
             body {
@@ -453,23 +537,24 @@
         <div class="works-grid">
             <!-- Work 1 -->
             <div class="work-item">
-                <a href="images/001.jpg" target="_blank" rel="noopener noreferrer">
-                    <div class="work-image" style="background-image: url('images/001.jpg')" role="img" aria-label="Alchemical Script artwork"></div>
+                <!-- Link to Vimeo Video -->
+                <a href="https://vimeo.com/1037811492?share=copy" target="_blank" rel="noopener noreferrer">
+                    <div class="work-image" style="background-image: url('images/010.jpg')" role="img" aria-label="Reverse Movement"></div>
                 </a>
                 <div class="work-info">
-                    <div class="work-title">Alchemical Script #5</div>
-                    <div class="work-meta">2024, Copper sulfate on treated paper</div>
+                    <div class="work-title">Reverse Movement</div>
+                    <div class="work-meta">2024, Copper oxidation, Sonic art, Calligraphy, collaborative work with Yuri Kuzmin</div>
                 </div>
             </div>
             
             <!-- Work 2 -->
             <div class="work-item">
-                <a href="images/002.jpg" target="_blank" rel="noopener noreferrer">
-                    <div class="work-image" style="background-image: url('images/002.jpg')" role="img" aria-label="Oxidation Series artwork"></div>
+                <a href="images/001.jpg" target="_blank" rel="noopener noreferrer">
+                    <div class="work-image" style="background-image: url('images/001.jpg')" role="img" aria-label="part of Mahāyāna Mahāparinirvāṇa Sūtra"></div>
                 </a>
                 <div class="work-info">
-                    <div class="work-title">Oxidation Series #3</div>
-                    <div class="work-meta">2023, Iron gall on handmade paper</div>
+                    <div class="work-title">Part of Mahāyāna Mahāparinirvāṇa Sūtra</div>
+                    <div class="work-meta">2021, Metal oxidation</div>
                 </div>
             </div>
             
@@ -479,8 +564,8 @@
                     <div class="work-image" style="background-image: url('images/003.jpg')" role="img" aria-label="Mercurial Strokes artwork"></div>
                 </a>
                 <div class="work-info">
-                    <div class="work-title">Mercurial Strokes</div>
-                    <div class="work-meta">2024, Silver nitrate and mercury on vellum</div>
+                    <div class="work-title">One divides into two</div>
+                    <div class="work-meta">2024, Calligraphy on metal</div>
                 </div>
             </div>
             
@@ -490,8 +575,8 @@
                     <div class="work-image" style="background-image: url('images/004.jpg')" role="img" aria-label="Corrosive Calligraphy artwork"></div>
                 </a>
                 <div class="work-info">
-                    <div class="work-title">Corrosive Calligraphy #2</div>
-                    <div class="work-meta">2023, Acid-etched copper plate</div>
+                    <div class="work-title">To hide by day and come out at night</div>
+                    <div class="work-meta">2023, Black oxidation on Zinc-coated metal, calligraphy</div>
                 </div>
             </div>
             
@@ -501,8 +586,8 @@
                     <div class="work-image" style="background-image: url('images/005.jpg')" role="img" aria-label="Metal Glyphs artwork"></div>
                 </a>
                 <div class="work-info">
-                    <div class="work-title">Metal Glyphs</div>
-                    <div class="work-meta">2024, Patinated bronze on steel</div>
+                    <div class="work-title">Drinking alone with the Moon</div>
+                    <div class="work-meta">2023, copper oxidation, Calligraphy</div>
                 </div>
             </div>
             
@@ -512,8 +597,30 @@
                     <div class="work-image" style="background-image: url('images/006.jpg')" role="img" aria-label="Rust Script artwork"></div>
                 </a>
                 <div class="work-info">
-                    <div class="work-title">Rust Script</div>
-                    <div class="work-meta">2023, Iron oxidation on treated canvas</div>
+                    <div class="work-title">Free and Unfettered </div>
+                    <div class="work-meta">2025, Calligraphy with coffee on metal</div>
+                </div>
+            </div>
+
+            <!-- Work 7 -->
+            <div class="work-item">
+                <a href="images/007.jpg" target="_blank" rel="noopener noreferrer">
+                    <div class="work-image" style="background-image: url('images/007.jpg')" role="img" aria-label="Metal Glyphs artwork"></div>
+                </a>
+                <div class="work-info">
+                    <div class="work-title">Drinking alone with the Moon</div>
+                    <div class="work-meta">2024, Instalation, copper oxidation, Calligraphy</div>
+                </div>
+            </div>
+            
+            <!-- Work 8 -->
+            <div class="work-item">
+                <a href="images/011.jpg" target="_blank" rel="noopener noreferrer">
+                    <div class="work-image" style="background-image: url('images/011.jpg')" role="img" aria-label="Rust Script artwork"></div>
+                </a>
+                <div class="work-info">
+                    <div class="work-title">Hymn to Ninkasi</div>
+                    <div class="work-meta">2025, Calligraphy with acrylic on glass</div>
                 </div>
             </div>
         </div>
@@ -612,81 +719,118 @@
                 </div>
             </div>
             
-            <!-- Group Exhibitions -->
-            <div class="exhibition-category">
-                <h3>Group Exhibitions</h3>
-                <div class="exhibition-list">
-                    <div class="exhibition-column">
-                        <!-- 2025-2023 Exhibitions -->
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2025</div>
-                            <div class="exhibition-title">"Exhibition-in-suitcases" for the 19th ACM International Conference</div>
-                            <div class="exhibition-location">CAPC Museum of Contemporary Art, Bordeaux, France</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2024</div>
-                            <div class="exhibition-title">"属望" (Prospect) Artist Residency Project Exhibition</div>
-                            <div class="exhibition-location">Hangzhou, China</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2024</div>
-                            <div class="exhibition-title">"春光住•第二回—宋韵传声" Youth Artists Exhibition</div>
-                            <div class="exhibition-location">Hangzhou, China</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2023</div>
-                            <div class="exhibition-title">International Contemporary Seal Cutting Exhibition</div>
-                            <div class="exhibition-location">Wanxiang Tower, Weifang, China</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2023</div>
-                            <div class="exhibition-title">"凉友集" Collective Exhibition</div>
-                            <div class="exhibition-location">单向空间, Hangzhou, China</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2023</div>
-                            <div class="exhibition-title">"高歌是紫砂" (Ode to Clay) Exhibition</div>
-                            <div class="exhibition-location">China Academy of Art, Hangzhou</div>
-                        </div>
-                    </div>
-                    <div class="exhibition-column">
-                        <!-- 2022-2009 Exhibitions -->
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2023</div>
-                            <div class="exhibition-title">"第零定律" (The Zeroth Law)</div>
-                            <div class="exhibition-location">Modern Calligraphy Research Centre, Hangzhou</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2022</div>
-                            <div class="exhibition-title">"他山之石" (Talents from Abroad) Exhibition</div>
-                            <div class="exhibition-location">Malaysia</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2022</div>
-                            <div class="exhibition-title">"青山行不尽" Art Exhibition of Tang Dynasty Poems</div>
-                            <div class="exhibition-location">Zhejiang Exhibition Gallery, Hangzhou</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2021</div>
-                            <div class="exhibition-title">"Question Mark Nth" Live Calligraphy Performance</div>
-                            <div class="exhibition-location">Hangzhou, China</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2021</div>
-                            <div class="exhibition-title">"隐 • 映像" (Reflections) Contemporary Art Exhibition</div>
-                            <div class="exhibition-location">Hangzhou, China</div>
-                        </div>
-                        <div class="exhibition-item">
-                            <div class="exhibition-year">2020</div>
-                            <div class="exhibition-title">"梦笔江南" International Ink Art Exhibition</div>
-                            <div class="exhibition-location">Huzhou, China</div>
-                        </div>
-                    </div>
-                </div>
+           <!-- Group Exhibitions -->
+<div class="exhibition-category">
+    <h3>Group Exhibitions</h3>
+    <div class="exhibition-list">
+        <div class="exhibition-column">
+            <!-- Left Column -->
+            <div class="exhibition-item">
+                <div class="exhibition-year">2025</div>
+                <div class="exhibition-title">“Exhibition-in-suitcases” for the 19th ACM International Conference on Tangible, Embedded and Embodied Interaction</div>
+                <div class="exhibition-location">CAPC (Museum of Contemporary Art), Bordeaux, France</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2024</div>
+                <div class="exhibition-title">「属望」 Prospect Artist Residency Project Exhibition</div>
+                <div class="exhibition-location">Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2023</div>
+                <div class="exhibition-title">Wanxiang Tower, International Contemporary Seal Cutting Exhibition</div>
+                <div class="exhibition-location">Weifang, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2023</div>
+                <div class="exhibition-title">“凉友集” Collective Exhibition</div>
+                <div class="exhibition-location">⼤⾕仓 单向空间, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2022</div>
+                <div class="exhibition-title">“他⼭之⽯” (Talents from Abroad) Exhibition of Youth Seal Cutters</div>
+                <div class="exhibition-location">Malaysia</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2021</div>
+                <div class="exhibition-title">“Question Mark Nth” Live Calligraphy Performance and Group Exhibition</div>
+                <div class="exhibition-location">Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2020</div>
+                <div class="exhibition-title">“梦笔江南” (Hubi Jiangnan) International Chinese Character Ink Art Exhibition</div>
+                <div class="exhibition-location">Huzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2020</div>
+                <div class="exhibition-title">“书⾳雅和” (Exhibition of Ink and Music in a Cloud)</div>
+                <div class="exhibition-location">Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2018</div>
+                <div class="exhibition-title">“感知中国” (Perceptions)</div>
+                <div class="exhibition-location">Museum of China Academy of Art, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2014</div>
+                <div class="exhibition-title">“International Student Works Exhibition”</div>
+                <div class="exhibition-location">Museum of China Academy of Art, Hangzhou, China</div>
             </div>
         </div>
-    </section>
-
+        <div class="exhibition-column">
+            <!-- Right Column -->
+            <div class="exhibition-item">
+                <div class="exhibition-year">2024</div>
+                <div class="exhibition-title">春光住•第⼆回—“宋韵传声”⻘年艺术家展</div>
+                <div class="exhibition-location">Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2023</div>
+                <div class="exhibition-title">“⾼歌是紫砂” (Ode to Clay) The Exhibition of Stoneware Pottery’s Engraving</div>
+                <div class="exhibition-location">China Academy of Art, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2023</div>
+                <div class="exhibition-title">“第零定律” (The Zeroth Law)</div>
+                <div class="exhibition-location">Modern Calligraphy Research Centre of China Academy of Art, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2022</div>
+                <div class="exhibition-title">“⻘⼭⾏不尽” (The Endless Trip of Green Mountain) Art Exhibition of Tang Dynasty Poems</div>
+                <div class="exhibition-location">Zhejiang Exhibition Gallery, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2021</div>
+                <div class="exhibition-title">“隐 • 映像” (Reflections) Contemporary Art Exhibition</div>
+                <div class="exhibition-location">Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2020</div>
+                <div class="exhibition-title">“多云⻄湖” (The Cloud of West Lake) International Chinese Characters Ink Art Exhibition</div>
+                <div class="exhibition-location">Shanghai, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2020</div>
+                <div class="exhibition-title">“健康 • ⼩康” (Jiankang • Xiaokang) Lanting Calligraphy Biennale Exhibition</div>
+                <div class="exhibition-location">Zhejiang Exhibition Hall, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2019</div>
+                <div class="exhibition-title">“书 • ⾮书” (Writting • Non-Writting) Modern Calligraphy Art Festival</div>
+                <div class="exhibition-location">Museum of China Academy of Art, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2017</div>
+                <div class="exhibition-title">“感知中国” (Perceptions) Collaboration with Central Academy of Fine Arts</div>
+                <div class="exhibition-location">China Academy of Art, Hangzhou, China</div>
+            </div>
+            <div class="exhibition-item">
+                <div class="exhibition-year">2010</div>
+                <div class="exhibition-title">“AMFO Photography Contest”</div>
+                <div class="exhibition-location">Košice, Slovakia</div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Publications Section -->
     <section class="section" id="publications">
         <div class="section-container">
@@ -711,89 +855,65 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Articles -->
-            <div class="exhibition-category">
-                <h3>Articles</h3>
-                <div class="exhibition-list">
-                    <div class="exhibition-item">
-                        <div class="exhibition-year">2019</div>
-                        <div class="exhibition-title">
-                            "China Art Weekly" (美术报)<br>
-                            "Learning Chinese Calligraphy and Painting in China" (我在中国学书画)
-                        </div>
-                        <div class="exhibition-location">
-                            Edited by Hangzhou China Art Weekly
-                        </div>
+<div class="section-container">
+    <div class="dual-columns">
+          <!-- Articles Section -->
+        <section id="articles">
+            <h3>Articles</h3>
+            <div class="articles-grid">
+                <div class="article-item">
+                    <div class="article-year">2019</div>
+                    <div class="article-title">
+                        "China Art Weekly" (美术报)<br>
+                        "Learning Chinese Calligraphy and Painting in China" (我在中国学书画)
                     </div>
-                    
-                    <div class="exhibition-item">
-                        <div class="exhibition-year">2018</div>
-                        <div class="exhibition-title">
-                            "China Art Weekly" (美术报)<br>
-                            "Can Calligraphy Be an Independent Art Form? The Aesthetics of Writing as Justification"<br>
-                            (书法能不能作为一个独立的艺术门类，"写得美"是书法存在的理由)
-                        </div>
-                        <div class="exhibition-location">
-                            Edited by Hangzhou China Art Weekly
-                        </div>
+                    <div class="article-meta">Edited by Hangzhou China Art Weekly</div>
+                </div>
+                <div class="article-item">
+                    <div class="article-year">2018</div>
+                    <div class="article-title">
+                        "China Art Weekly" (美术报)<br>
+                        "Can Calligraphy Be an Independent Art Form? The Aesthetics of Writing as Justification"<br>
+                        (书法能不能作为一个独立的艺术门类，"写得美"是书法存在的理由)
                     </div>
+                    <div class="article-meta">Edited by Hangzhou China Art Weekly</div>
                 </div>
             </div>
+        </section>
 
-            <!-- Catalogues -->
-            <div class="exhibition-category">
-                <h3>Catalogues</h3>
-                <div class="exhibition-list">
-                    <div class="exhibition-item">
-                        <div class="exhibition-year">2020</div>
-                        <div class="exhibition-title">"梦笔江南" 首届中国湖笔与汉字艺术大展</div>
-                        <div class="exhibition-location">
-                            Omar Al Kanawati<br>
-                            Edited by Wang Xiaoming: 76-77
-                        </div>
-                    </div>
-                    
-                    <div class="exhibition-item">
-                        <div class="exhibition-year">2020</div>
-                        <div class="exhibition-title">"云朵西湖" 国际汉字水墨艺术作品展</div>
-                        <div class="exhibition-location">
-                            Omar Al Kanawati<br>
-                            Edited by Wang Xiaoming: 54-55
-                        </div>
-                    </div>
-                    
-                    <div class="exhibition-item">
-                        <div class="exhibition-year">2020</div>
-                        <div class="exhibition-title">"The Collection of Biennial exhibition of Lanting Calligraphy Association"</div>
-                        <div class="exhibition-location">
-                            Omar Al Kanawati (欧阳麒)<br>
-                            Edited by 浙江人民美术出版社: 113
-                        </div>
-                    </div>
-                    
-                    <div class="exhibition-item">
-                        <div class="exhibition-year">2019</div>
-                        <div class="exhibition-title">"Writing non-Writing" Hangzhou International Modern Calligraphy Festival</div>
-                        <div class="exhibition-location">
-                            Omar Al Kanawati (欧阳麒)<br>
-                            Edited by China Academy of Art Press: 202-203
-                        </div>
-                    </div>
-                    
-                    <div class="exhibition-item">
-                        <div class="exhibition-year">2015</div>
-                        <div class="exhibition-title">"Writing non-Writing 2015 COLLECTION"</div>
-                        <div class="exhibition-location">
-                            Omar Al Kanawati (欧陽麒)<br>
-                            Edited by China Academy of Art Press: 98-99
-                        </div>
-                    </div>
+        <!-- Catalogues Section -->
+        <section id="catalogues">
+            <h3>Catalogues</h3>
+            <div class="catalogues-grid">
+                <div class="catalogue-item">
+                    <div class="catalogue-year">2020</div>
+                    <div class="catalogue-title">"梦笔江南" 首届中国湖笔与汉字艺术大展</div>
+                    <div class="catalogue-meta">Omar Al Kanawati<br>Edited by Wang Xiaoming: 76-77</div>
+                </div>
+                <div class="catalogue-item">
+                    <div class="catalogue-year">2020</div>
+                    <div class="catalogue-title">"云朵西湖" 国际汉字水墨艺术作品展</div>
+                    <div class="catalogue-meta">Omar Al Kanawati<br>Edited by Wang Xiaoming: 54-55</div>
+                </div>
+                <div class="catalogue-item">
+                    <div class="catalogue-year">2020</div>
+                    <div class="catalogue-title">"The Collection of Biennial exhibition of Lanting Calligraphy Association"</div>
+                    <div class="catalogue-meta">Omar Al Kanawati (欧阳麒)<br>Edited by 浙江人民美术出版社: 113</div>
+                </div>
+                <div class="catalogue-item">
+                    <div class="catalogue-year">2019</div>
+                    <div class="catalogue-title">"Writing non-Writing" Hangzhou International Modern Calligraphy Festival</div>
+                    <div class="catalogue-meta">Omar Al Kanawati (欧阳麒)<br>Edited by China Academy of Art Press: 202-203</div>
+                </div>
+                <div class="catalogue-item">
+                    <div class="catalogue-year">2015</div>
+                    <div class="catalogue-title">"Writing non-Writing 2015 COLLECTION"</div>
+                    <div class="catalogue-meta">Omar Al Kanawati (欧阳麒)<br>Edited by China Academy of Art Press: 98-99</div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
+</div>
     <footer id="contact">
     <div class="social-links">
        <a href="https://instagram.com/_omarkanawati_" target="_blank" rel="noopener noreferrer">
