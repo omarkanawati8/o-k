@@ -504,8 +504,10 @@
     }
 
     .social-links {
-        margin-top: 20px; /* Add spacing above the social icons */
-        justify-content: center; /* Center-align icons */
+        display: grid; /* Use CSS Grid to create rows and columns */
+        grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+        grid-template-rows: repeat(2, auto); /* 2 rows of icons */
+        gap: 20px; /* Add spacing between icons */
     }
 }
 
@@ -513,14 +515,16 @@
 @media (max-width: 768px) {
     /* Move profile picture to the top in the About section */
     .about-container {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center content horizontally */
-    }
+    display: flex; /* Ensure it's a flex container */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+}
 
-    .profile-picture {
-        order: -1; /* Move profile picture to the top */
-        max-width: 80%; /* Ensure it spans the container width */
-        margin-bottom: 20px; /* Add space below the profile picture */
+.profile-picture {
+    order: -1; /* Moves profile picture to the top */
+    max-width: 80%; /* Restrict the picture size */
+    margin-bottom: 20px; /* Add spacing below the picture */
+	
     }
 
     .about-content {
@@ -534,10 +538,25 @@
         align-items: center; /* Center-align content */
     }
 
-    .social-links {
-        margin-top: 20px; /* Add spacing above the social icons */
-        justify-content: center; /* Center-align icons */
-    }
+   .social-links {
+    display: grid; /* Use CSS Grid to create rows and columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+    grid-template-rows: repeat(2, auto); /* 2 rows of icons */
+    gap: 20px; /* Add spacing between icons */
+    justify-content: center; /* Center the entire grid horizontally */
+    align-items: center; /* Center the icons vertically */
+    margin-top: 20px; /* Add spacing above the social icons */
+}
+
+.social-icon {
+    width: 40px; /* Set icon width */
+    height: 40px; /* Set icon height */
+    transition: transform 0.2s ease; /* Add hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+
 }
     </style>
 </head>
