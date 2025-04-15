@@ -478,36 +478,76 @@
                 display: none;
             }
     }
-       /* For Mobile Devices (phones, smaller than 576px) */
+       /* General Styles for Mobile Devices */
 @media (max-width: 576px) {
-    /* Move profile picture to the top in the About section */
+    body {
+        padding-top: 60px; /* Adjust top padding for smaller screens */
+    }
+
+    header {
+        padding: 10px 15px; /* Reduce header padding */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Add spacing between links */
+    }
+
+    .hero {
+        height: auto; /* Allow hero section to adjust height */
+        padding: 40px 20px; /* Reduce padding */
+    }
+
+    .section {
+        padding: 40px 20px; /* Reduce section padding for smaller screens */
+    }
+
     .about-container {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center content horizontally */
+        display: flex;
+        flex-direction: column; /* Stack profile picture and text vertically */
+        align-items: center; /* Center-align content */
     }
 
     .profile-picture {
         order: -1; /* Move profile picture to the top */
-        max-width: 100%; /* Ensure it spans the container width */
-        margin-bottom: 20px; /* Add space below the profile picture */
+        max-width: 100%; /* Ensure image fits within the screen width */
+        margin-bottom: 20px; /* Add spacing below the image */
     }
 
     .about-content {
-        max-width: 100%; /* Make text content take full width */
-        text-align: center; /* Center-align text for better readability */
+        text-align: center; /* Center-align text */
+        max-width: 100%; /* Ensure text fits within the screen */
     }
 
-    /* Move social media icons under the footer container */
-    .footer-container {
-        flex-direction: column; /* Stack newsletter and icons vertically */
-        align-items: center; /* Center-align content */
+    .works-grid, .performance-grid {
+        grid-template-columns: 1fr; /* Single column layout for works and performance */
+        gap: 20px; /* Reduce spacing between items */
+    }
+
+    .work-image, .performance-video {
+        height: 200px; /* Reduce image and video height for smaller screens */
+    }
+
+    .exhibition-list {
+        grid-template-columns: 1fr; /* Single column layout for exhibitions */
+        gap: 20px; /* Reduce spacing between items */
+    }
+
+    .publication-list, .catalogues-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    footer {
+        padding: 20px 10px; /* Reduce footer padding */
     }
 
     .social-links {
-        display: grid; /* Use CSS Grid to create rows and columns */
         grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
         grid-template-rows: repeat(2, auto); /* 2 rows of icons */
-        gap: 20px; /* Add spacing between icons */
+        gap: 10px; /* Reduce spacing between icons */
+        justify-content: center; /* Center the icons */
+        margin-top: 20px; /* Add spacing above the social icons */
     }
 }
 
