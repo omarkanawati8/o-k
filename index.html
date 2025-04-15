@@ -477,106 +477,66 @@
             .nav-links, .footer-links {
                 display: none;
             }
-        /* For Mobile Devices (phones, smaller than 576px) */
+    }
+       /* For Mobile Devices (phones, smaller than 576px) */
 @media (max-width: 576px) {
-    header {
-        padding: 10px 15px; /* Smaller padding for the header */
-        flex-direction: column; /* Stack logo and nav links */
-        align-items: flex-start;
+    /* Move profile picture to the top in the About section */
+    .about-container {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content horizontally */
     }
 
-    .nav-links {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 10px;
+    .profile-picture {
+        order: -1; /* Move profile picture to the top */
+        max-width: 100%; /* Ensure it spans the container width */
+        margin-bottom: 20px; /* Add space below the profile picture */
     }
 
-    .hero h1 {
-        font-size: 24px; /* Smaller font for the title */
+    .about-content {
+        max-width: 100%; /* Make text content take full width */
+        text-align: center; /* Center-align text for better readability */
     }
 
-    .hero-subtitle {
-        font-size: 14px; /* Adjust subtitle font size */
-    }
-
-    .section {
-        padding: 40px 15px; /* Reduce padding for smaller screens */
-    }
-
-    .works-grid, .performance-grid {
-        grid-template-columns: 1fr; /* Single column layout for works and performance sections */
-        gap: 20px;
-    }
-
-    .work-image, .performance-video {
-        height: 200px; /* Adjust image and video height */
+    /* Move social media icons under the footer container */
+    .footer-container {
+        flex-direction: column; /* Stack newsletter and icons vertically */
+        align-items: center; /* Center-align content */
     }
 
     .social-links {
-        flex-wrap: wrap; /* Wrap social media links to multiple rows */
-        gap: 15px;
-    }
-
-    .social-icon {
-        width: 30px; /* Smaller social media icons */
-        height: 30px;
-    }
-
-    footer {
-        padding: 20px 10px; /* Smaller footer padding */
-    }
-
-    .newsletter-title {
-        font-size: 20px; /* Adjust newsletter title size */
-    }
-
-    .newsletter-description {
-        font-size: 14px; /* Adjust description font size */
+        margin-top: 20px; /* Add spacing above the social icons */
+        justify-content: center; /* Center-align icons */
     }
 }
 
 /* For Tablets (iPads, screens between 576px and 768px) */
 @media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
+    /* Move profile picture to the top in the About section */
+    .about-container {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content horizontally */
     }
 
-    .nav-links {
-        gap: 20px; /* Slightly tighter gap for navigation links */
+    .profile-picture {
+        order: -1; /* Move profile picture to the top */
+        max-width: 80%; /* Ensure it spans the container width */
+        margin-bottom: 20px; /* Add space below the profile picture */
     }
 
-    .hero h1 {
-        font-size: 28px; /* Adjust hero title */
+    .about-content {
+        max-width: 100%; /* Make text content take full width */
+        text-align: center; /* Center-align text for better readability */
     }
 
-    .hero-subtitle {
-        font-size: 16px; /* Adjust subtitle */
-    }
-
-    .section {
-        padding: 60px 20px; /* Reduce padding for tablet screens */
-    }
-
-    .works-grid, .performance-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 30px; /* Adjust spacing between items */
-    }
-
-    .work-image, .performance-video {
-        height: 300px; /* Moderate image and video height */
+    /* Move social media icons under the footer container */
+    .footer-container {
+        flex-direction: column; /* Stack newsletter and icons vertically */
+        align-items: center; /* Center-align content */
     }
 
     .social-links {
-        justify-content: center; /* Center social links on tablets */
-        gap: 20px;
-    }
-
-    .social-icon {
-        width: 35px; /* Slightly smaller icons */
-        height: 35px;
-    }
-
-    footer {
-        padding: 30px 15px; /* Adjust footer padding */
+        margin-top: 20px; /* Add spacing above the social icons */
+        justify-content: center; /* Center-align icons */
     }
 }
     </style>
