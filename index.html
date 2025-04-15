@@ -992,6 +992,8 @@ of China Academy of Art Hangzhou China</div>
                     <div class="catalogue-meta">Omar Al Kanawati (欧阳麒)<br>Edited by China Academy of Art Press: 98-99</div>
                 </div>
             </div>
+	   </div>
+           </div>
         </section>
     </div>
 </div>
@@ -1049,18 +1051,18 @@ of China Academy of Art Hangzhou China</div>
         width: 35px;
         height: 35px;
         margin: 0; /* Remove margin for grid alignment */
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease;
+        align-items: flex-end; /* Align both sections to the same bottom line */
     }
 
     .social-media-section {
         display: grid;
-        grid-template-columns: repeat(3, auto); /* 3 columns for each row */
-        grid-template-rows: repeat(2, auto); /* 2 rows */
+        grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+        grid-template-rows: repeat(2, auto); /* 2 rows of icons */
         gap: 40px 100px; /* Vertical (20px) and Horizontal (60px) spacing */
-        justify-content: end; /* Align to the right */
-        align-items: center; /* Vertically center the icons */
-        margin-left: 40px; /* Add spacing between the newsletter and icons */
-        padding-right: 60px; /* Add padding to shift icons left from the edge */
+        justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    margin-top: 20px; /* Add space above the social icons */
     }
 
     .social-icon:hover {
