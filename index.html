@@ -1055,12 +1055,12 @@ of China Academy of Art Hangzhou China</div>
         align-items: flex-end; /* Align both sections to the same bottom line */
     }
 
-    .social-media-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
-        grid-template-rows: repeat(2, auto); /* 2 rows of icons */
-        gap: 40px 100px; /* Vertical (20px) and Horizontal (60px) spacing */
-        justify-content: center; /* Center the icons horizontally */
+    .social-links {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+    grid-template-rows: repeat(2, auto); /* 2 rows of icons */
+    gap: 80px; /* Space between icons */
+    justify-content: center; /* Center the icons horizontally */
     align-items: center; /* Center the icons vertically */
     margin-top: 20px; /* Add space above the social icons */
     }
@@ -1070,12 +1070,13 @@ of China Academy of Art Hangzhou China</div>
     }
 
     .footer-container {
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: flex-end; /* Align both sections to the same bottom line */
-        padding: 40px 80px; /* Add padding to the container */
-        background-color: #f5f5f5;
-        border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between; /* Distribute newsletter and icons evenly */
+    align-items: flex-end; /* Align both sections to the bottom line */
+    padding: 40px 80px; /* Add padding to the container */
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+}
     }
 
     .newsletter-section {
