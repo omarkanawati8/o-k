@@ -534,125 +534,244 @@
                 display: none;
             }
     }
-       /* General Styles for Mobile Devices */
+       /* For Mobile Devices (phones, smaller than 576px) */
 @media (max-width: 576px) {
-    body {
-        padding-top: 60px; /* Adjust top padding for smaller screens */
-    }
-
     header {
-        padding: 10px 15px; /* Reduce header padding */
+        padding: 10px 15px; /* Smaller padding for the header */
+        flex-direction: column; /* Stack logo and nav links */
+        align-items: flex-start;
     }
 
     .nav-links {
         flex-direction: column; /* Stack navigation links vertically */
-        gap: 10px; /* Add spacing between links */
+        gap: 10px;
+        margin-top: 10px; /* Add spacing between logo and nav links */
     }
 
     .hero {
-        height: auto; /* Allow hero section to adjust height */
-        padding: 40px 20px; /* Reduce padding */
+        padding: 40px 15px; /* Add padding inside the hero section */
+        text-align: center; /* Center-align content for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 24px; /* Smaller font for the title */
+    }
+
+    .hero-subtitle {
+        font-size: 14px; /* Adjust subtitle font size */
     }
 
     .section {
-        padding: 40px 20px; /* Reduce section padding for smaller screens */
+        padding: 40px 15px; /* Reduce padding for smaller screens */
     }
 
     .about-container {
-        display: flex;
-        flex-direction: column; /* Stack profile picture and text vertically */
-        align-items: center; /* Center-align content */
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 20px;
     }
 
-    .profile-picture {
-        order: -1; /* Move profile picture to the top */
-        max-width: 100%; /* Ensure image fits within the screen width */
-        margin-bottom: 20px; /* Add spacing below the image */
+    .profile-picture img {
+        max-width: 100%; /* Ensure image takes full width */
+        height: auto; /* Maintain aspect ratio */
     }
 
-    .about-content {
-        text-align: center; /* Center-align text */
-        max-width: 100%; /* Ensure text fits within the screen */
-    }
-
-    .works-grid, .performance-grid {
-        grid-template-columns: 1fr; /* Single column layout for works and performance */
-        gap: 20px; /* Reduce spacing between items */
-    }
-
-    .work-image, .performance-video {
-        height: 200px; /* Reduce image and video height for smaller screens */
-    }
-
-    .exhibition-list {
-        grid-template-columns: 1fr; /* Single column layout for exhibitions */
-        gap: 20px; /* Reduce spacing between items */
-    }
-
-    .publication-list, .catalogues-grid {
-        grid-template-columns: 1fr; /* Single column layout */
+    .works-grid,
+    .performance-grid {
+        grid-template-columns: 1fr; /* Single column layout for works and performance sections */
         gap: 20px; /* Add spacing between items */
     }
 
-    footer {
-        padding: 20px 10px; /* Reduce footer padding */
+    .work-image,
+    .performance-video {
+        height: 200px; /* Adjust image and video height */
+    }
+
+    .exhibition-list {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    /* Publications Section */
+    .publication-list {
+        margin-top: 20px; /* Add spacing above publications */
+    }
+
+    .publication-item {
+        margin-bottom: 30px; /* Space between each publication */
+        font-size: 14px; /* Smaller font size for better fit */
+        line-height: 1.4; /* Adjust line height */
+    }
+
+    .publication-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .publication-meta {
+        font-size: 12px; /* Smaller font for metadata */
+        color: var(--text-muted); /* Muted color for metadata */
+    }
+
+    /* CV Section */
+    #cv {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+        text-align: left; /* Ensure text aligns to the left */
+    }
+
+    .cv-content ul {
+        padding-left: 20px; /* Adjust indent for nested lists */
+    }
+
+    .cv-content li {
+        font-size: 14px;
+        margin-bottom: 10px; /* Adjust spacing between items */
+    }
+
+    .cv-content h3 {
+        font-size: 18px; /* Smaller section headers */
+        margin-bottom: 10px;
     }
 
     .social-links {
-        grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
-        grid-template-rows: repeat(2, auto); /* 2 rows of icons */
-        gap: 10px; /* Reduce spacing between icons */
-        justify-content: center; /* Center the icons */
-        margin-top: 20px; /* Add spacing above the social icons */
+        flex-wrap: wrap; /* Wrap social media links to multiple rows */
+        gap: 15px; /* Reduce spacing between icons */
+    }
+
+    .social-icon {
+        width: 20px; /* Smaller social media icons */
+        height: 20px;
+    }
+
+    footer {
+        padding: 20px 10px; /* Smaller footer padding */
+        text-align: center; /* Center-align footer content */
+    }
+
+    .newsletter-title {
+        font-size: 20px; /* Adjust newsletter title size */
+    }
+
+    .newsletter-description {
+        font-size: 14px; /* Adjust description font size */
     }
 }
 
 /* For Tablets (iPads, screens between 576px and 768px) */
 @media (max-width: 768px) {
-    /* Move profile picture to the top in the About section */
+    header {
+        padding: 15px 20px; /* Adjust header padding */
+    }
+
+    .nav-links {
+        gap: 20px; /* Slightly tighter gap for navigation links */
+    }
+
+    .hero {
+        padding: 60px 20px; /* Add padding inside the hero section */
+        text-align: center; /* Center-align content */
+    }
+
+    .hero h1 {
+        font-size: 28px; /* Adjust hero title */
+    }
+
+    .hero-subtitle {
+        font-size: 16px; /* Adjust subtitle */
+    }
+
+    .section {
+        padding: 60px 20px; /* Reduce padding for tablet screens */
+    }
+
     .about-container {
-    display: flex; /* Ensure it's a flex container */
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center; /* Centers items horizontally */
-}
-
-.profile-picture {
-    order: -1; /* Moves profile picture to the top */
-    max-width: 80%; /* Restrict the picture size */
-    margin-bottom: 20px; /* Add spacing below the picture */
-	
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 30px; /* Add spacing between image and text */
     }
 
-    .about-content {
-        max-width: 100%; /* Make text content take full width */
-        text-align: center; /* Center-align text for better readability */
+    .profile-picture img {
+        max-width: 100%; /* Ensure image takes full width */
+        height: auto; /* Maintain aspect ratio */
     }
 
-    /* Move social media icons under the footer container */
-    .footer-container {
-        flex-direction: column; /* Stack newsletter and icons vertically */
-        align-items: center; /* Center-align content */
+    .works-grid,
+    .performance-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 30px; /* Adjust spacing between items */
     }
 
-   .social-links {
-    display: grid; /* Use CSS Grid to create rows and columns */
-    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
-    grid-template-rows: repeat(2, auto); /* 2 rows of icons */
-    gap: 20px; /* Add spacing between icons */
-    justify-content: center; /* Center the entire grid horizontally */
-    align-items: center; /* Center the icons vertically */
-    margin-top: 20px; /* Add spacing above the social icons */
-}
+    .work-image,
+    .performance-video {
+        height: 300px; /* Moderate image and video height */
+    }
 
-.social-icon {
-    width: 40px; /* Set icon width */
-    height: 40px; /* Set icon height */
-    transition: transform 0.2s ease; /* Add hover effect */
-}
+    .exhibition-list {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 30px; /* Add spacing between items */
+    }
 
-.social-icon:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    /* Publications Section */
+    .publication-list {
+        margin-top: 20px; /* Add spacing above publications */
+    }
 
+    .publication-item {
+        margin-bottom: 30px; /* Space between each publication */
+        font-size: 16px; /* Adjust font size */
+        line-height: 1.5;
+    }
+
+    .publication-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .publication-meta {
+        font-size: 14px; /* Adjust metadata font size */
+        color: var(--text-muted);
+    }
+
+    /* CV Section */
+    #cv {
+        padding: 40px 20px; /* Adjust padding for tablets */
+        text-align: left; /* Ensure text aligns to the left */
+    }
+
+    .cv-content ul {
+        padding-left: 20px; /* Adjust indent for nested lists */
+    }
+
+    .cv-content li {
+        font-size: 16px; /* Adjust font size */
+        margin-bottom: 15px; /* Adjust spacing between items */
+    }
+
+    .cv-content h3 {
+        font-size: 20px; /* Adjust section headers */
+        margin-bottom: 15px;
+    }
+
+    .social-links {
+        justify-content: center; /* Center social icons */
+        gap: 20px; /* Adjust spacing between icons */
+    }
+
+    .social-icon {
+        width: 35px; /* Slightly smaller icons */
+        height: 35px;
+    }
+
+    footer {
+        padding: 30px 15px; /* Adjust footer padding */
+        text-align: center; /* Center-align footer content */
+    }
+
+    .newsletter-title {
+        font-size: 24px; /* Adjust newsletter title size */
+    }
+
+    .newsletter-description {
+        font-size: 16px; /* Adjust description font size */
+    }
 }
     </style>
 </head>
